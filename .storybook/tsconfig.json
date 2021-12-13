@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "exclude": [
+    "../src/test.ts",
+    "../src/**/*.spec.ts",
+    "../components/**/*.spec.ts"
+  ],
+  "include": ["../src/**/*", "../components/**/*"],
+  "files": ["./typings.d.ts"]
+}
