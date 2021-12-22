@@ -1,443 +1,678 @@
 {
-  "pipes": [],
-  "interfaces": [],
-  "injectables": [
-    {
-      "name": "ButtonService",
-      "id": "injectable-ButtonService-a16325e20b44678e41fe9d787089af35fa3347557a3edb306789bdc19979195b1cca5496c58d3b74690a43145fdc0f6679fb83decbd99649706916864ec788b3",
-      "file": "components/button/src/lib/button.service.ts",
-      "properties": [],
-      "methods": [],
-      "deprecated": false,
-      "deprecationMessage": "",
-      "description": "",
-      "rawdescription": "\n",
-      "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ButtonService {\n\n  constructor() { }\n}\n",
-      "constructorObj": {
-        "name": "constructor",
-        "description": "",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "args": [],
-        "line": 6
-      },
-      "type": "injectable"
-    },
-    {
-      "name": "InputService",
-      "id": "injectable-InputService-19a1337e71a6261e7790967288e9a2bfbb1cb9fdcbc3694fcc997048d9a247388fa4d28c97963b2135e9cd05f1f1f2d249a6a5f3f6d8ca979956ff8f1f55506e",
-      "file": "components/input/src/lib/input.service.ts",
-      "properties": [],
-      "methods": [],
-      "deprecated": false,
-      "deprecationMessage": "",
-      "description": "",
-      "rawdescription": "\n",
-      "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class InputService {\n\n  constructor() { }\n}\n",
-      "constructorObj": {
-        "name": "constructor",
-        "description": "",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "args": [],
-        "line": 6
-      },
-      "type": "injectable"
-    }
-  ],
-  "guards": [],
-  "interceptors": [],
-  "classes": [],
-  "directives": [],
-  "components": [
-    {
-      "name": "ButtonComponent",
-      "id": "component-ButtonComponent-2410732f234db1805f88c42167443364dcf4d1c7ec0dd81a7bbdbe1e80a255fab2cc487f9d8fb3b08cf3550e1a7988ab269890ddaf37a4cc21b7fd74468ba03e",
-      "file": "components/button/src/lib/button.component.ts",
-      "encapsulation": [],
-      "entryComponents": [],
-      "inputs": [],
-      "outputs": [],
-      "providers": [],
-      "selector": "matsam-button",
-      "styleUrls": ["./button.component.scss"],
-      "styles": [],
-      "templateUrl": ["./button.component.html"],
-      "viewProviders": [],
-      "inputsClass": [
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [
         {
-          "name": "disabled",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "line": 10,
-          "type": "boolean",
-          "decorators": []
+            "name": "ButtonService",
+            "id": "injectable-ButtonService-a8060c91a66e6cb65e6dfb2d1f21f31910cade0f56851c5c66ed0c604adfc42651d3182b727a4f647fab69bb73b162ae6714cf981ae7da528e06733e3923ed02",
+            "file": "components/button/src/lib/button.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "formatClasses",
+                    "args": [
+                        {
+                            "name": "classes",
+                            "type": "string[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 9,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "classes",
+                            "type": "string[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class ButtonService {\n  constructor() {}\n\n  formatClasses(classes: string[]): string {\n    if (!classes || !Array.isArray(classes)) return '';\n\n    let classesStr = ' ' + classes.join(' ') + ' ';\n\n    return classesStr;\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
+            "type": "injectable"
         },
         {
-          "name": "text",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "line": 9,
-          "type": "string",
-          "decorators": []
+            "name": "InputService",
+            "id": "injectable-InputService-19a1337e71a6261e7790967288e9a2bfbb1cb9fdcbc3694fcc997048d9a247388fa4d28c97963b2135e9cd05f1f1f2d249a6a5f3f6d8ca979956ff8f1f55506e",
+            "file": "components/input/src/lib/input.service.ts",
+            "properties": [],
+            "methods": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class InputService {\n\n  constructor() { }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            },
+            "type": "injectable"
         }
-      ],
-      "outputsClass": [],
-      "propertiesClass": [],
-      "methodsClass": [
-        {
-          "name": "ngOnInit",
-          "args": [],
-          "optional": false,
-          "returnType": "void",
-          "typeParameters": [],
-          "line": 14,
-          "deprecated": false,
-          "deprecationMessage": ""
-        }
-      ],
-      "deprecated": false,
-      "deprecationMessage": "",
-      "hostBindings": [],
-      "hostListeners": [],
-      "description": "",
-      "rawdescription": "\n",
-      "type": "component",
-      "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'matsam-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent implements OnInit {\n  @Input() text: string;\n  @Input() disabled: boolean;\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
-      "assetsDirs": [],
-      "styleUrlsData": [
-        {
-          "data": "button {\n  background-color: red;\n}\n",
-          "styleUrl": "./button.component.scss"
-        }
-      ],
-      "stylesData": "",
-      "constructorObj": {
-        "name": "constructor",
-        "description": "",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "args": [],
-        "line": 10
-      },
-      "implements": ["OnInit"],
-      "templateData": "<button [disabled]=\"disabled\">{{ text }}</button>\n"
-    },
-    {
-      "name": "InputComponent",
-      "id": "component-InputComponent-6cccaf95e98e995dbbf38ff2696071099183df300cd10b42654ec2aeef44b83870107d00de5d23c93953119d43353cf17d95e6101f669fc15212a6fb76faf075",
-      "file": "components/input/src/lib/input.component.ts",
-      "encapsulation": [],
-      "entryComponents": [],
-      "inputs": [],
-      "outputs": [],
-      "providers": [],
-      "selector": "matsam-input",
-      "styleUrls": [],
-      "styles": [],
-      "template": "<p>\n  input works!\n</p>\n",
-      "templateUrl": [],
-      "viewProviders": [],
-      "inputsClass": [],
-      "outputsClass": [],
-      "propertiesClass": [],
-      "methodsClass": [
-        {
-          "name": "ngOnInit",
-          "args": [],
-          "optional": false,
-          "returnType": "void",
-          "typeParameters": [],
-          "line": 17,
-          "deprecated": false,
-          "deprecationMessage": ""
-        }
-      ],
-      "deprecated": false,
-      "deprecationMessage": "",
-      "hostBindings": [],
-      "hostListeners": [],
-      "description": "",
-      "rawdescription": "\n",
-      "type": "component",
-      "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'matsam-input',\n  template: `\n    <p>\n      input works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class InputComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
-      "assetsDirs": [],
-      "styleUrlsData": "",
-      "stylesData": "",
-      "constructorObj": {
-        "name": "constructor",
-        "description": "",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "args": [],
-        "line": 13
-      },
-      "implements": ["OnInit"]
-    }
-  ],
-  "modules": [
-    {
-      "name": "ButtonModule",
-      "id": "module-ButtonModule-fc9b78509683f21065b966d1304b44d8433cc4d4a0ac12daf904f4b31fa275a083e389da9b01916dac2bba722ea8918546ee4ab3993da3ac6bebbcc13117266d",
-      "description": "",
-      "deprecationMessage": "",
-      "deprecated": false,
-      "file": "components/button/src/lib/button.module.ts",
-      "methods": [],
-      "sourceCode": "import { NgModule } from '@angular/core';\nimport { ButtonComponent } from './button.component';\n\n\n\n@NgModule({\n  declarations: [\n    ButtonComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class ButtonModule { }\n",
-      "children": [
-        {
-          "type": "providers",
-          "elements": []
-        },
-        {
-          "type": "declarations",
-          "elements": [
-            {
-              "name": "ButtonComponent"
-            }
-          ]
-        },
-        {
-          "type": "imports",
-          "elements": []
-        },
-        {
-          "type": "exports",
-          "elements": [
-            {
-              "name": "ButtonComponent"
-            }
-          ]
-        },
-        {
-          "type": "bootstrap",
-          "elements": []
-        },
-        {
-          "type": "classes",
-          "elements": []
-        }
-      ]
-    },
-    {
-      "name": "InputModule",
-      "id": "module-InputModule-eedcc80612e1d52dc3bf2aae0f6b077fbed24bdfdd6c20637397536f41444d31577c3ca977abb509cbd78cdd7595c900ca3812b46b9d2a60a13c362373b1499a",
-      "description": "",
-      "deprecationMessage": "",
-      "deprecated": false,
-      "file": "components/input/src/lib/input.module.ts",
-      "methods": [],
-      "sourceCode": "import { NgModule } from '@angular/core';\nimport { InputComponent } from './input.component';\n\n\n\n@NgModule({\n  declarations: [\n    InputComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    InputComponent\n  ]\n})\nexport class InputModule { }\n",
-      "children": [
-        {
-          "type": "providers",
-          "elements": []
-        },
-        {
-          "type": "declarations",
-          "elements": [
-            {
-              "name": "InputComponent"
-            }
-          ]
-        },
-        {
-          "type": "imports",
-          "elements": []
-        },
-        {
-          "type": "exports",
-          "elements": [
-            {
-              "name": "InputComponent"
-            }
-          ]
-        },
-        {
-          "type": "bootstrap",
-          "elements": []
-        },
-        {
-          "type": "classes",
-          "elements": []
-        }
-      ]
-    }
-  ],
-  "miscellaneous": {
-    "variables": [
-      {
-        "name": "context",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "components/button/src/test.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-      },
-      {
-        "name": "context",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "components/input/src/test.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-      },
-      {
-        "name": "require",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "components/button/src/test.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "literal type"
-      },
-      {
-        "name": "require",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "components/input/src/test.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "literal type"
-      }
     ],
-    "functions": [],
-    "typealiases": [],
-    "enumerations": [],
-    "groupedVariables": {
-      "components/button/src/test.ts": [
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
         {
-          "name": "context",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "components/button/src/test.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-6575bd6e9b132e8d673406d69ae4ffc3bfc82926fdb2fc20e6b9c5efb8aca4a668c4a37d7f17a2229ddb6d766a14d8490f31d8bbcfb1c0ba6199d4453525a2f0",
+            "file": "components/button/src/lib/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "matsam-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "classes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOverride or extend the styles applied to the component.",
+                    "description": "<p>Override or extend the styles applied to the component.</p>\n",
+                    "line": 26,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIf true, the component is disabled.",
+                    "description": "<p>If true, the component is disabled.</p>\n",
+                    "line": 23,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "fullWidth",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIf true, the button will take up the full width of its container.",
+                    "description": "<p>If true, the button will take up the full width of its container.</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nThe size to use.",
+                    "description": "<p>The size to use.</p>\n",
+                    "line": 17,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nText applied to button",
+                    "description": "<p>Text applied to button</p>\n",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'contained'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nThe variant to use.",
+                    "description": "<p>The variant to use.</p>\n",
+                    "line": 14,
+                    "type": "\"text\" | \"contained\" | \"outlined\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nEmits on click",
+                    "description": "<p>Emits on click</p>\n",
+                    "line": 29,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "buttonService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonService",
+                    "optional": false,
+                    "description": "",
+                    "line": 31,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { ButtonService } from './button.service';\n\n@Component({\n  selector: 'matsam-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /** Text applied to button */\n  @Input() text: string;\n\n  /** The variant to use. */\n  @Input() variant: 'text' | 'contained' | 'outlined' = 'contained';\n\n  /** The size to use. */\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\n\n  /** If true, the button will take up the full width of its container. */\n  @Input() fullWidth: boolean = false;\n\n  /** If true, the component is disabled. */\n  @Input() disabled: boolean = false;\n\n  /** Override or extend the styles applied to the component. */\n  @Input() classes: string[];\n\n  /** Emits on click */\n  @Output() onClick = new EventEmitter();\n\n  constructor(public buttonService: ButtonService) {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".matsam-button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  outline: 0px;\n  border: 0px;\n  margin: 0px;\n  cursor: pointer;\n  user-select: none;\n  vertical-align: middle;\n  appearance: none;\n  text-decoration: none;\n  font-family: Roboto, Helvetica, Arial, sans-serif;\n  font-weight: 500;\n  font-size: 0.875rem;\n  line-height: 1.75;\n  letter-spacing: 0.02857em;\n  text-transform: uppercase;\n  min-width: 64px;\n  padding: 6px 16px;\n  border-radius: 4px;\n}\n\n.variant {\n  &__text {\n    background-color: transparent;\n    color: rgb(25, 118, 210);\n\n    &.disabled {\n      pointer-events: none;\n      cursor: default;\n    }\n  }\n\n  &__contained {\n    background-color: rgb(25, 118, 210);\n    color: #fff;\n    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,\n      rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;\n\n    &.disabled {\n      color: rgba(0, 0, 0, 0.26);\n      box-shadow: none;\n      background-color: rgba(0, 0, 0, 0.12);\n    }\n  }\n\n  &__outlined {\n    background-color: transparent;\n    border: 1px solid rgb(25, 118, 210);\n    color: rgb(25, 118, 210);\n\n    &.disabled {\n      color: rgba(0, 0, 0, 0.26);\n      border: 1px solid rgba(0, 0, 0, 0.12);\n    }\n  }\n}\n\n.size {\n  &__small {\n    padding: 4px 10px;\n    font-size: 0.8125rem;\n  }\n\n  &__medium {\n    padding: 6px 16px;\n    font-size: 0.875rem;\n  }\n\n  &__large {\n    padding: 8px 22px;\n    font-size: 0.9375rem;\n  }\n}\n\n.fullWidth {\n  width: 100%;\n}\n\n.disabled {\n  pointer-events: none;\n}\n",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "buttonService",
+                        "type": "ButtonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 29,
+                "jsdoctags": [
+                    {
+                        "name": "buttonService",
+                        "type": "ButtonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<button\n  (click)=\"onClick.emit()\"\n  [disabled]=\"disabled\"\n  [class]=\"buttonService.formatClasses(classes) + 'matsam-button'\"\n  [ngClass]=\"{\n    size__small: size === 'small',\n    size__medium: size === 'medium',\n    size__large: size === 'large',\n\n    variant__text: variant === 'text',\n    variant__contained: variant === 'contained',\n    variant__outlined: variant === 'outlined',\n\n    fullWidth: fullWidth,\n    disabled: disabled\n  }\"\n>\n  {{ text }}\n</button>\n"
         },
         {
-          "name": "require",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "components/button/src/test.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "literal type"
+            "name": "InputComponent",
+            "id": "component-InputComponent-6cccaf95e98e995dbbf38ff2696071099183df300cd10b42654ec2aeef44b83870107d00de5d23c93953119d43353cf17d95e6101f669fc15212a6fb76faf075",
+            "file": "components/input/src/lib/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "matsam-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p>\n  input works!\n</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'matsam-input',\n  template: `\n    <p>\n      input works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class InputComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 13
+            },
+            "implements": [
+                "OnInit"
+            ]
         }
-      ],
-      "components/input/src/test.ts": [
+    ],
+    "modules": [
         {
-          "name": "context",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "components/input/src/test.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            "name": "ButtonModule",
+            "id": "module-ButtonModule-992cf9bf4137b8dc204eda77ddc81827a949240f903098967acd07fddccd822768075b032315e1b2b9c476f7902d658fdcdb38029936b3c5621a469d0adb0b4f",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "components/button/src/lib/button.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { ButtonComponent } from './button.component';\n\n@NgModule({\n  declarations: [ButtonComponent],\n  imports: [CommonModule],\n  exports: [ButtonComponent],\n})\nexport class ButtonModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         },
         {
-          "name": "require",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "components/input/src/test.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "literal type"
+            "name": "InputModule",
+            "id": "module-InputModule-eedcc80612e1d52dc3bf2aae0f6b077fbed24bdfdd6c20637397536f41444d31577c3ca977abb509cbd78cdd7595c900ca3812b46b9d2a60a13c362373b1499a",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "components/input/src/lib/input.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { InputComponent } from './input.component';\n\n\n\n@NgModule({\n  declarations: [\n    InputComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    InputComponent\n  ]\n})\nexport class InputModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
-      ]
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Contained",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/lib/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/input/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Outlined",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/lib/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/input/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/lib/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Text",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "components/button/src/lib/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "components/button/src/lib/button.stories.ts": [
+                {
+                    "name": "Contained",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/lib/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Outlined",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/lib/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/lib/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "Text",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/lib/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ],
+            "components/button/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/button/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "components/input/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/input/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "components/input/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
     },
-    "groupedFunctions": {},
-    "groupedEnumerations": {},
-    "groupedTypeAliases": {}
-  },
-  "routes": [],
-  "coverage": {
-    "count": 0,
-    "status": "low",
-    "files": [
-      {
-        "filePath": "components/button/src/lib/button.component.ts",
-        "type": "component",
-        "linktype": "component",
-        "name": "ButtonComponent",
-        "coveragePercent": 0,
-        "coverageCount": "0/5",
-        "status": "low"
-      },
-      {
-        "filePath": "components/button/src/lib/button.service.ts",
-        "type": "injectable",
-        "linktype": "injectable",
-        "name": "ButtonService",
-        "coveragePercent": 0,
-        "coverageCount": "0/2",
-        "status": "low"
-      },
-      {
-        "filePath": "components/button/src/test.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "context",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "components/button/src/test.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "require",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "components/input/src/lib/input.component.ts",
-        "type": "component",
-        "linktype": "component",
-        "name": "InputComponent",
-        "coveragePercent": 0,
-        "coverageCount": "0/3",
-        "status": "low"
-      },
-      {
-        "filePath": "components/input/src/lib/input.service.ts",
-        "type": "injectable",
-        "linktype": "injectable",
-        "name": "InputService",
-        "coveragePercent": 0,
-        "coverageCount": "0/2",
-        "status": "low"
-      },
-      {
-        "filePath": "components/input/src/test.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "context",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "components/input/src/test.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "require",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      }
-    ]
-  }
+    "routes": [],
+    "coverage": {
+        "count": 5,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "components/button/src/lib/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 70,
+                "coverageCount": "7/10",
+                "status": "good"
+            },
+            {
+                "filePath": "components/button/src/lib/button.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ButtonService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/lib/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Contained",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/lib/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Outlined",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/lib/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/lib/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Text",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/button/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/input/src/lib/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "components/input/src/lib/input.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "InputService",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "components/input/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "components/input/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
 }

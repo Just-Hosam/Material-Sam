@@ -1,1 +1,19 @@
-<button [disabled]="disabled">{{ text }}</button>
+<button
+  (click)="onClick.emit()"
+  [disabled]="disabled"
+  [class]="buttonService.formatClasses(classes) + 'matsam-button'"
+  [ngClass]="{
+    size__small: size === 'small',
+    size__medium: size === 'medium',
+    size__large: size === 'large',
+
+    variant__text: variant === 'text',
+    variant__contained: variant === 'contained',
+    variant__outlined: variant === 'outlined',
+
+    fullWidth: fullWidth,
+    disabled: disabled
+  }"
+>
+  {{ text }}
+</button>

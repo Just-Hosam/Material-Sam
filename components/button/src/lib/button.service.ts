@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ButtonService {
+  constructor() {}
 
-  constructor() { }
+  formatClasses(classes: string[]): string {
+    if (!classes || !Array.isArray(classes)) return '';
+
+    let classesStr = ' ' + classes.join(' ') + ' ';
+
+    return classesStr;
+  }
 }
